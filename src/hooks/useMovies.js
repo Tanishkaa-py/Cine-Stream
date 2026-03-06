@@ -1,25 +1,24 @@
 import { useState, useEffect } from "react";
-import { fetchPopularMovies, searchMovies } from "../utils/api";
+import { searchMovies } from "../utils/api";
 
 function useMovies(query, page) {
+
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
 
     const loadMovies = async () => {
-      let results;
 
-      if (query) {
-        results = await searchMovies(query, page);
-      } else {
-        results = await fetchPopularMovies(page);
-      }
+      const searchQuery = query || "Avengers";
+
+      const results = await searchMovies(searchQuery, page);
 
       if (page === 1) {
         setMovies(results);
       } else {
         setMovies((prev) => [...prev, ...results]);
       }
+
     };
 
     loadMovies();

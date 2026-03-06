@@ -1,7 +1,7 @@
 import MovieCard from "./MovieCard";
 import "./MovieGrid.css";
 
-function MovieGrid({ movies, lastRef }) {
+function MovieGrid({ movies = [], lastRef }) {
 
   return (
     <div className="grid">
@@ -18,7 +18,7 @@ function MovieGrid({ movies, lastRef }) {
 
         return (
           <MovieCard
-            key={movie.imdbID}
+          key={`${movie.imdbID}-${index}`}
             movie={movie}
           />
         );

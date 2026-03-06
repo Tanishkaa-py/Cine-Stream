@@ -1,12 +1,13 @@
 .movie-card {
-    background: #1c1c1c;
-    border-radius: 10px;
+    background: #141414;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
   
   .movie-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.6);
   }
   
   .movie-card img {
@@ -17,15 +18,10 @@
   
   .movie-card h3 {
     margin: 10px;
+    font-size: 16px;
   }
   
   .movie-card p {
     margin: 0 10px 10px;
-    color: #bbb;
-  }
-  
-  .favorite-icon {
-    margin: 10px;
-    cursor: pointer;
-    color: red;
+    color: #aaa;
   }

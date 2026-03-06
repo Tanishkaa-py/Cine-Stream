@@ -1,16 +1,171 @@
-# React + Vite
+# 🎬 CineStream – AI-Powered Movie Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CineStream is a Netflix-style movie discovery application built with **React** that allows users to search for movies, scroll through results infinitely, save favorites, and even get movie recommendations based on their mood using AI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+🔗 https://your-vercel-url.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Project Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="100%" alt="CineStream Screenshot" src="./public/project-preview.png">
+
+---
+
+## 🚀 Features
+
+### 🔍 Movie Search
+
+Users can search for movies using the OMDb API.
+
+### ⚡ Debounced API Calls
+
+Search input uses debouncing so API calls are made only after the user stops typing.
+
+### ♾ Infinite Scrolling
+
+Movies load dynamically as the user scrolls using the Intersection Observer API.
+
+### ❤️ Favorites System
+
+Users can add movies to favorites which are stored in localStorage.
+
+### 🖼 Lazy Loading
+
+Movie posters are loaded lazily to improve performance.
+
+### 🤖 AI Mood Matcher
+
+Users can describe their mood and receive a movie suggestion powered by Google Gemini AI.
+
+Example:
+
+```
+Input: "I feel nostalgic but want an action movie"
+AI Suggestion: "Mad Max: Fury Road"
+```
+
+---
+
+## 🧠 Technologies Used
+
+* React
+* Vite
+* JavaScript
+* CSS Grid
+* OMDb API
+* Google Gemini API
+* Intersection Observer API
+* Local Storage
+
+---
+
+## 🏗 Project Architecture
+
+```
+src
+│
+├─ components
+│   MovieCard.jsx
+│   MovieGrid.jsx
+│   SearchBar.jsx
+│   MoodMatcher.jsx
+│
+├─ hooks
+│   useMovies.js
+│   useDebounce.js
+│   useInfiniteScroll.js
+│
+├─ pages
+│   Home.jsx
+│   Favorites.jsx
+│
+├─ utils
+│   api.js
+│   ai.js
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root folder.
+
+```
+VITE_OMDB_API_KEY=your_omdb_key
+VITE_GEMINI_API_KEY=your_gemini_key
+```
+
+---
+
+## 🛠 Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/yourusername/cinestream.git
+```
+
+Navigate to the project:
+
+```
+cd cinestream
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run development server:
+
+```
+npm run dev
+```
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+
+Steps:
+
+1. Push project to GitHub
+2. Import repository in Vercel
+3. Add environment variables
+4. Deploy
+
+---
+
+## 📈 Performance Optimizations
+
+* Debounced API requests
+* Lazy loading images
+* Infinite scroll
+* Optimized API calls
+
+---
+
+## 📚 Future Improvements
+
+* Movie details page
+* Trailer integration
+* Dark/light theme toggle
+* User authentication
+* Watchlist feature
+
+---
+
+## 👩‍💻 Author
+
+Tanishka
+AI Developer/Full Stack Developer
+
+GitHub: https://github.com/Tanishkaa-py
+

@@ -6,13 +6,14 @@ CineStream is a Netflix-style movie discovery application built with **React** t
 
 ## 🌐 Live Demo
 
-🔗 https://your-vercel-url.vercel.app
+🔗 [https://your-vercel-url.vercel.app](https://cine-stream-6nno.vercel.app/)
 
 ---
 
 ## 📸 Project Preview
 
-<img width="100%" alt="CineStream Screenshot" src="./public/project-preview.png">
+<img width="1575" height="778" alt="image" src="https://github.com/user-attachments/assets/d3869af5-efff-472c-b22f-f78ad180aeb0" />
+
 
 ---
 
